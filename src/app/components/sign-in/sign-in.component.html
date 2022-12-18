@@ -1,0 +1,37 @@
+<div class="container">
+  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+
+    <nz-form-item >
+      <nz-form-control [nzSm]="6" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+        <nz-input-group>
+          <input nz-input formControlName="email"  id="email" type="text" placeholder="Email" class="inputStyle"/>
+
+        </nz-input-group>
+        <nz-form-label  nzRequired nzFor="email" [nzSm]="6" [nzXs]="24">E-mail</nz-form-label>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzSm]="6" [nzXs]="24" nzErrorTip="Please input your Password!">
+        <nz-input-group nzPrefixIcon="lock">
+          <input type="password"  nz-input formControlName="password" placeholder="Password" class="inputStyle"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <div nz-row class="login-form-margin">
+      <div nz-col [nzSpan]="12">
+        <label nz-checkbox formControlName="remember">
+          <span>Remember me</span>
+        </label>
+      </div>
+      <div nz-col [nzSpan]="12">
+        <a class="login-form-forgot">Forgot password</a>
+      </div>
+    </div>
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+    Or
+
+    <a routerLink="/signup">register now!</a>
+  </form>
+  <span nz-icon nzType="lock" nzTheme="outline"></span>
+
+</div>
