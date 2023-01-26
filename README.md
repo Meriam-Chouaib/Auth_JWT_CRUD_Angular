@@ -1,2 +1,2 @@
 # Auth_JWT_CRUD_Angular
-Angular project Authentification with CRUD
+Angular & Node & MySQL project Authentification with CRUD
